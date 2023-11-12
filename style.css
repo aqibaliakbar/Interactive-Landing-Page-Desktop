@@ -60,7 +60,9 @@ nav ul li a:before {
   bottom: -6px;
   transition: width 0.3s;
 }
-
+.header__menu-mobile {
+  display: none;
+}
 /* Hero Section */
 
 main {
@@ -86,6 +88,8 @@ h1 {
 
 .subheading {
   font-size: 1.8rem;
+  text-align: left;
+  width: 95%;
 }
 
 .cta-btns {
@@ -143,7 +147,9 @@ p.details {
   grid-template-columns: repeat(2, auto);
   grid-template-areas: "left ." "left .";
 }
-
+.card-heading {
+  display: none;
+}
 .card {
   border-radius: 0.8em;
   padding: 1.1em;
@@ -248,4 +254,143 @@ main {
   to {
     transform: scale(1);
   }
+}
+
+/* START: header media queries */
+
+@media screen and (max-width: 900px) {
+  nav ul li a {
+    font-size: 1.5rem;
+  }
+   .header__logo {
+    padding: 0 0 0 50px;
+    width: 180px;
+    height: 40px;
+    margin-top: 0;
+  }
+  
+  
+  .header__menu {
+    display: flex;
+  }
+
+  .header__menu-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .header__logo {
+    padding: 0 0 0 20px;
+    width: 180px;
+    height: 40px;
+    margin-top: 0;
+  }
+   .header__menu {
+    display: none;
+  }
+
+  .header__menu-mobile {
+    display: flex;
+  }
+}
+/* END: header media queries */
+
+/*Hero Section*/
+
+@media screen and (max-width: 900px) {
+  main {
+    padding: 50px;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+  
+  }
+
+  .left-col {
+    width: 100%;
+  }
+
+  .subheading {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  main {
+    padding: 20px;
+    margin-top: 2em;
+    flex-wrap: wrap;
+  }
+
+  .left-col {
+    width: 100%;
+  }
+
+  .subheading {
+    width: 100%;
+  }
+}
+
+/* Right-Col Section */
+
+@media screen and (max-width: 900px) {
+  .right-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-heading {
+    display: block;
+  }
+  .card {
+    border: 1px solid black;
+    border-radius: 0.8em;
+  }
+
+  .card1 {
+    background-image: none;
+  }
+
+  .card2 {
+    background-image: none;
+  }
+  .card3 {
+    background-image: none;
+  }
+
+   .card:hover .card-details {
+  transform: translateY(-10px);
+}
+}
+
+
+@media screen and (max-width: 550px) {
+  .right-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-heading {
+    display: block;
+  }
+  .card {
+    border: 1px solid black;
+    border-radius: 0.8em;
+  }
+
+  .card1 {
+    background-image: none;
+  }
+
+  .card2 {
+    background-image: none;
+  }
+  .card3 {
+    background-image: none;
+  }
+
+  .card:hover .card-details {
+  transform: translateY(-10px);
+}
 }
